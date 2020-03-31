@@ -1,0 +1,220 @@
+/* Import Less File */
+@import "variables.less";
+
+/* =================================================================== 
+						NAVIGATION MENU
+======================================================================*/
+/* Select2 Custom */
+.select2-container {
+  width: 100%!important;
+  .radius(5px);
+  .shadow(0 0 10px 0 rgba(0, 0, 0, 0.1));
+  &--default {
+      .select2-selection--single {
+          height: 46px;
+          border-color: @color_border;
+          background-color: #ffffff;
+          .radius(5px);
+          .select2-selection__rendered {
+              font-size: 14px;
+              line-height: 46px;  
+              color: @color_lgrey;
+              font-weight: 600;
+              outline: none;
+              padding-left: 15px;
+          }
+          .select2-selection__arrow {
+              height: 46px;
+              right: 15px;
+              b {
+                  border-color: @color_border transparent transparent transparent;
+                  border-width: 8px 8px 0 8px;
+                  left: 0;
+                  margin-left: 0;
+                  top: 45%;
+                  .transition(all 350ms);
+              }
+          }
+          &:focus {
+              outline: none; 
+          }
+      }
+      
+
+
+      .select2-dropdown {
+          border-color: @color_primary;
+          .select2-search {
+              outline: none;
+              &:focus, &:active {
+                  outline: none;
+              }
+              &--dropdown {
+                  padding: 4px 8px;
+                  .select2-search__field {
+                      outline: none;
+                      .radius(4px);
+                      border-color: @color_primary;
+                  }
+              }
+          }
+          .select2-results {
+              &__option {
+                  color: @color_paragraph;
+                  padding-left: 20px;
+                  margin-bottom: 3px;
+                  &[aria-selected=true] {
+                      background-color: @color_primary;
+                      color: #ffffff;
+                  }
+                  &--highlighted {
+                      background-color: @color_primary;
+                      color: #ffffff;
+                  }
+                  &:last-child {
+                      margin-bottom: 0;
+                  }
+              }
+          }
+      }
+      &.select2-container--open {
+          .select2-selection--single {
+              /* border-top-color: @color_primary;
+              border-left-color: @color_primary;
+              border-right-color: @color_primary;
+              border-bottom-color: @color_primary; */
+              .select2-selection__arrow {
+                  b {
+                      /* border-color: transparent transparent #fff transparent;
+                      border-width: 0 8px 8px 8px; */
+                      border-color: @color_border transparent transparent transparent;
+                      border-width: 8px 8px 0 8px;
+                      left: 0;
+                      margin-left: 0;
+                      transform: rotate(180deg);
+                      .transition(all 350ms);
+                  }
+              }
+          }
+      } 
+  }
+}
+.select2-container--default .select2-selection--multiple{
+    .radius(25px);
+}
+.select2-container--default.select2-container--focus .select2-selection--multiple{
+    border-color: @color_primary;
+    padding-left: 7px;
+    padding-top: 3px;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice{
+    .radius(20px);
+    margin-top: 6px;
+    font-size: 13px;
+    background: @color_primary;
+    color: #fff;
+    border-color: @color_primary;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove{
+    color: #fff;
+}
+
+/* Bootstrap Multi Select */
+.multiselect-native-select {
+    display: block;
+    .radius(5px);
+    .shadow(0 0 10px 0 rgba(0, 0, 0, 0.1));
+    .btn-group {
+        width: 100%;
+    }
+    .multiselect {
+        &.btn {
+            width: 100%;
+            text-align: left;
+            color: @color_lgrey; 
+            background-color: #fff;
+            border: 1px solid @color_border;
+            padding: 0;
+            .radius(5px);
+            position: relative;
+            .caret {
+                position: absolute;
+                top: 50%;
+                right: 18px;
+                transform: translateY(-50%);
+                border-color: #e1e1e1 transparent transparent transparent;
+                border-width: 8px 8px 0 8px;
+                border-style: solid;
+                .transition(all 350ms);
+            }
+        }
+        &-selected-text {
+            display: block;
+            line-height: 44px;
+            padding: 0 15px 0 20px;
+        }
+    }
+    .open {
+        >.dropdown-toggle {
+            .shadow(none);
+            &.btn-default {
+                color: @color_lgrey; 
+                background-color: #fff;
+                border-color: @color_border;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+                &:hover,  {
+                    color: @color_lgrey; 
+                    background-color: #fff;
+                    border-color: @color_border;
+                }
+            }
+            .caret {
+                transform: rotate(180deg);
+                .transition(all 350ms);
+            }
+        }
+        >.dropdown-menu {
+            width: 100%;
+            border-color: @color_primary;
+            border-top: 0;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            >li {
+                background-color: #fff;
+                &.multiselect-filter {
+                    padding: 4px 8px;
+                    .form-control {
+                        height: 38px;
+                        padding: 4px;
+                        border-color: @color_primary;
+                    }
+                }
+                >a {
+                    >label {
+                        padding: 6px 6px 6px 20px;
+                        font-weight: 500;
+                        color: @color_body;
+                        >input[type="checkbox"] {
+                            margin: 0;
+                            position: relative;
+                        }
+                    }
+                    &.multiselect-all{
+                        label {
+                            font-weight: 500;
+                        }
+                    } 
+                }
+                &.active {
+                    >a {
+                        background-color: transparent;
+                        label {
+                            color: @color_primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

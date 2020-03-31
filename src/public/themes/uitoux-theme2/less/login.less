@@ -1,0 +1,744 @@
+/* Import Less Files */
+@import "variables.less";
+
+/* Login Style */
+.content-wrap {
+    &.login-page {
+        box-shadow: none;
+        padding: 0;
+        height: auto;
+        margin: 0;
+        @media @min991{
+            margin-top: -30px;
+            margin-bottom: -30px;
+        }
+        .page-main-content {
+            padding: 0;
+            .shadow(none);
+        }
+    }
+}
+.login{
+    &-page {
+        .match-height {
+            @media @min991{
+                display: table;
+                width: 100%;
+                padding: 30px 0;
+                >div {
+                    display: table-cell;
+                    float: none;
+                    vertical-align: top;
+                }
+            }
+        }
+    }
+    &-left {
+        border-right: 1px solid #bcc3cb;
+    }
+    &-footer {
+        /* padding-top: 130px; */
+        position: fixed;
+        left: 80px;
+        bottom: 60px;
+        .footer-description {
+            font-size: 10px;
+            font-weight: 300;
+            color: @color_body;
+            margin: 0;
+        }
+        .footer-logo {
+            padding-top:10px;
+            img {
+                width: 100px;
+            }
+        }
+    }
+    &-logo {
+        padding-bottom: 40px;
+    }
+    &-wrap{
+        padding: 40px 90px 0;
+        /* position: relative; */
+        overflow: hidden;
+        height: 100%;
+        .login {
+            &-left-logo {
+                padding-top: 70px;
+                padding-bottom: 30px;
+            }
+            &-header {
+                padding: 0;
+                .title {
+                    font-size: 50px;
+                    color: @color_body ;
+                    line-height: 1.43;
+                    position: relative;
+                    margin-bottom: 50px;
+                    &::after {
+                        content:"";
+                        position: absolute;
+                        display: inline-block;
+                        bottom: -20px;
+                        left: 0;
+                        .radius(5.5px);
+                        height: 11px;
+                        width: 52%;
+                        .gradient_primary();
+                    }
+                }
+                .login-description {
+                    padding: 50px 0 0px;
+                    font-size: 18px;
+                    font-weight: 300;
+                    color: @color_body;
+                }
+            }
+            &-footer {
+                /* padding-top: 130px; */
+                position: absolute;
+                bottom: 100px;
+                display: none!important;
+                .footer-description {
+                    font-size: 10px;
+                    font-weight: 300;
+                    color: @color_body;
+                    margin: 0;
+                }
+                .footer-logo {
+                    padding-top:10px;
+                    img {
+                        width: 100px;
+                    }
+                }
+            }
+            &-logo {
+                padding-bottom: 40px;
+            }
+        }
+        &.login-separate-wrap {
+            .login {
+                &-header {
+                    .title {
+                        
+                    }
+                }
+                &-footer {
+                    .footer {
+                        &-logo {
+                            img {
+                                width: 80px;
+                            }
+                        }
+                    }
+                }
+            }
+            &.osl-portal, &.vims-portal {
+                .login {
+                    &-header {
+                        .login-description {
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+            &.osl-portal {
+                .login {
+                    &-left-logo {
+                        padding-top: 0;
+                        padding-bottom: 15px;
+                    }
+                    &-header {
+                        > img {
+                            height: 400px;
+                        }
+                    }
+                }
+            }
+        }
+        .form-minimal{
+            float: left;
+            width: 100%;
+            position: relative;
+            .transform(translateX(0%));
+            .transition(all 1.5s);
+            .form{
+                &-group {
+                    label{
+                        font-size: 16px;
+                        font-weight: bold;
+                        color: @color_body;
+                    }
+                    .form-control {
+                        padding: 30px;
+                        font-size: 16px;
+                    }
+                    .login-forgot {
+                        a {
+                            color: #333333;
+                            font-size: 16px;
+                            &:hover, &:focus {
+                                color: @color_primary;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                } 
+                &-login {
+                    padding-bottom: 25px;
+                    .btn-login {
+                        padding: 20px 60px;
+                        width:100%;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        .radius(5px);
+                    }
+                }
+                
+            }
+            .forgot-text {
+                a {
+                    color: #333333;
+                    cursor: pointer;
+                    font-size: 16px;
+                    &:hover, &:focus {
+                        color: @color_primary;
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .row {
+                margin-bottom: 20px;
+                .checkbox-set {
+                    display: inline-block;
+                    margin-bottom: 0;
+                        .checkbox {
+                            margin: 0;
+                        }
+                    label {
+                        color: @color_body;
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+                }
+            }
+            .login-logo {
+                display: none;
+            }
+            .login-footer {
+                display: none;
+            }
+            &.form-close {
+                position: absolute;
+                height: 100%;
+                .transform(translateX(-500%));
+                .transition(all 1.5s);
+            }
+        }
+        .forgot-form {
+            position: absolute;
+            width: 100%;
+            float: left;
+            .transform(translateX(500%));
+            .transition(all 1.5s);
+            &.open {
+                position: relative;
+                .transform(translateX(0px));
+                .transition(all 1.5s);
+            }
+            &.form-close {
+                position: absolute;
+                height: 100%;
+                .transform(translateX(-500%));
+                .transition(all 1.5s);
+            }
+            &-head {
+                padding-bottom: 35px;
+                h4 {
+                    font-weight: 700;
+                }
+            }
+            .btn {
+                width: 100%;
+                padding: 20px 60px;
+                text-transform: uppercase;
+                font-weight: 700;
+                .radius(5px);
+                margin-bottom: 20px;
+                &-link {
+                    color: #333333;
+                    font-size: 16px;
+                    &:hover, &:focus {
+                        color: @color_primary;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        .confirmation-form {
+            position: absolute;
+            width: 100%;
+            float: left;
+            .transform(translateX(500%));
+            .transition(all 1.5s);
+            &.open {
+                position: relative;
+                .transform(translateX(0px));
+                .transition(all 1.5s);
+            }
+            &.form-close {
+                position: absolute;
+                height: 100%;
+                .transform(translateX(-500%));
+                .transition(all 1.5s);
+            }
+            &-head {
+                padding-bottom: 35px;
+                h4 {
+                    font-weight: 700;
+                }
+            }
+            .btn {
+                width: 100%;
+                padding: 20px 60px;
+                text-transform: uppercase;
+                font-weight: 700;
+                .radius(5px);
+                margin-bottom: 20px;
+                &-link {
+                    color: #333333;
+                    font-size: 16px;
+                    &:hover, &:focus {
+                        color: @color_primary;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        .password-form {
+            position: absolute;
+            width: 100%;
+            float: left;
+            .transform(translateX(500%));
+            .transition(all 1.5s);
+            &.open {
+                position: relative;
+                .transform(translateX(0px));
+                .transition(all 1.5s);
+            }
+            &-head {
+                padding-bottom: 35px;
+                h4 {
+                    font-weight: 700;
+                }
+            }
+            .btn {
+                width: 100%;
+                padding: 20px 60px;
+                text-transform: uppercase;
+                font-weight: 700;
+                .radius(5px);
+                margin-bottom: 20px;
+                &-link {
+                    color: #333333;
+                    font-size: 16px;
+                    &:hover, &:focus {
+                        color: @color_primary;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/******************************************************************************
+						Max Width "1400px"  Min Widh "1300px"
+*******************************************************************************/
+@media screen and (max-width: 1400px) and (min-width: 1300px) {
+	.login{
+        &-wrap {
+            .login {
+                &-footer {
+                    padding-top: 50px;
+                }
+            }
+        }
+    }
+}
+
+/******************************************************************************
+						Max Width "1299px"  Min Widh "1100px"
+*******************************************************************************/
+@media screen and (max-width: 1299px) and (min-width: 1100px) {
+	.login{
+        &-wrap {
+            .login {
+                &-header {
+                    padding-bottom: 30px;
+                    .title {
+                        font-size: 45px;
+                    }
+                    .login-description {
+                        padding-top: 40px;
+                    }
+                }
+                &-footer {
+                    padding-top:70px;
+                }
+            }
+        }
+    }
+}
+/******************************************************************************
+						Max Width "1099px"  Min Widh "1024px"
+*******************************************************************************/
+@media screen and (max-width: 1099px) and (min-width: 1024px) {
+	.login{
+        &-wrap {
+            .login {
+                &-header {
+                    .title {
+                        font-size: 40px;
+                    }
+                    .login-description {
+                        padding-top: 30px;
+                        font-size: 16px;
+                    }
+                }
+                &-footer {
+                    padding-top:90px;
+                }
+            }
+            .form-minimal{
+                .row {
+                    .checkbox-set {
+                        label {
+                            text-align: left;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/******************************************************************************
+						Max Width "1023px"  Min Widh "992px"
+*******************************************************************************/
+@media screen and (max-width: 1023px) and (min-width: 992px) {
+	.login{
+        &-wrap {
+            .login {
+                &-header {
+                    .title {
+                        font-size: 40px;
+                    }
+                }
+                &-footer {
+                    padding-top:20px;
+                    .footer-description {
+                        font-size: 16px;
+                    }
+                }
+            }
+            .form-minimal{
+                .row {
+                    .checkbox-set {
+                        label {
+                            font-size: 14px;
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/******************************************************************************
+  Max Width "1499px"
+*******************************************************************************/
+@media only screen and (max-width:1600px){
+    .login{
+        &-wrap {
+            .login {
+                &-footer {
+                    padding-top: 50px;
+                }
+            }
+        }
+    }
+    .login {
+        &-wrap {
+            padding: 35px 40px 0;
+            .login-logo {
+                padding-bottom: 20px;
+            }
+            .login-header {
+                .title {
+                    font-size: 36px;
+                    font-weight: 500;
+                    margin-bottom: 30px;
+                    &:after {
+                        bottom: -30px;
+                    }
+                }
+                .login-description {
+                    padding: 30px 0;
+                }
+            }
+            .login-left-logo {
+                padding-top: 15px;
+            }
+            .form-minimal {
+                .form {
+                    &-group {
+                        .form-control {
+                            padding: 25px 12px;
+                        }
+                        margin-bottom: 24px;
+                    }
+                }
+            }
+            .login-footer {
+                bottom: 0;
+                .footer-logo {
+                    padding-top: 0;
+                }
+            }
+            &.login-separate-wrap {
+                .login-header {
+                    .title {
+                        margin-bottom: 30px;
+                    }
+                }
+                &.osl-portal, &.vims-portal {
+                    .login {
+                        &-header {
+                            .login-description {
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
+                &.osl-portal {
+                    .login {
+                        &-header {
+                            > img {
+                                height: 300px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/******************************************************************************
+  Max Width "1499px"
+*******************************************************************************/
+@media only screen and (max-width:1440px){
+    .main-wrap {
+        &.login {
+            padding: 20px 30px;
+        }
+    }
+    .login {
+        &-wrap {
+            padding: 20px 40px 0;
+            overflow: inherit;
+            .login-logo {
+                padding-bottom: 20px;
+            }
+            .form-minimal {
+                .form {
+                    &-group {
+                        margin-bottom: 20px;
+                        .form-control {
+                            padding: 12px 12px;
+                            font-size: 14px;
+                            height: 42px;
+                        }
+                    }
+                    &-login {
+                        padding-bottom: 10px;
+                        .btn-login {
+                            padding: 12px 60px;
+                        }
+                    }
+                }
+                .checkbox-set {
+                    label {
+                        width: 100%;
+                    }
+                }
+            }
+            .login-footer {
+               /*  padding-top: 85px;
+                position: absolute;
+                top: 100%; */
+                bottom: 0;
+            }
+        }
+    }
+}
+/******************************************************************************
+  Max Width "991px"
+*******************************************************************************/
+@media only screen and (max-width:991px){
+    .main-wrap {
+        &.login {
+            padding: 20px 30px;
+        }
+    }
+    .content-wrap {
+        &.login-page {
+
+        }
+    }
+    .login{
+        &-left {
+            border-right: 0px;
+        }
+        &-wrap {
+            padding: 0 30px;
+            overflow: inherit;
+            .login {
+                &-left-logo {
+                    padding-bottom: 15px;
+                    padding-top: 0;
+                }
+                &-header {
+                    padding: 0;
+                    .title {
+                        font-size: 30px;
+                        margin-bottom: 50px;
+                    }
+                    .login-description {
+                        font-size: 14px;
+                    }
+                }
+                &-footer {
+                    display: none;
+                }
+                &-logo {
+                    padding-bottom: 10px;
+                }
+            }
+            .form-minimal{
+                .row {
+                    margin-bottom: 0;
+                    .checkbox-set {
+                        display: inline-block;
+                        label {
+                            font-size: 14px;
+                            text-align: left;
+                        }
+                    }
+                }
+                .login-footer {
+                    display: block;
+                    border-top: 1px solid #bcc3cb;
+                    padding-top: 15px;
+                    margin-top: 15px;
+                    position: absolute;
+                    top: 100%;
+                    .footer-description {
+                        font-size: 14px;
+                        margin-bottom: 0;
+                    }
+                }
+                .form-group {
+                    .form-control {
+                        padding: 6px 12px;
+                    }
+                    .login-forgot {
+                        text-align: center
+                    }
+                }
+                .form-login {
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+/******************************************************************************
+  Max Width "767px"
+*******************************************************************************/
+@media only screen and (max-width:767px) {
+    .main-wrap {
+        &.login {
+            padding: 15px 20px;
+        }
+    }
+    .login {
+        &-wrap {
+            padding: 0;
+            .login {
+                &-header {
+                    display: none;
+                    .title {
+                        font-size: 26px;
+                    }
+                    .login-description {
+                        padding: 10px 0;
+                    }
+                }
+                &-logo {
+                    max-width: 50px;
+                }
+                &-footer {
+                    .footer-logo {
+                        img {
+                            width: 90px;
+                        }
+                    }
+                }
+            }
+            .form-minimal {
+                .login-footer {
+                    .footer-description {
+                        font-size: 12px;
+                    }
+                }
+                .form-login {
+                    padding-bottom: 10px;
+                    padding-top: 10px;
+                    .btn-login {
+                        padding: 12px 25px;
+                    }
+                }
+                .forgot-text {
+                    line-height: 1;
+                }
+                .form-group {
+                    label {
+                        font-size: 13px;
+                        margin-bottom: 0;
+                    }
+                    .form-control {
+                        height: 40px;
+                    }
+                }
+            }
+        }
+        &-footer {
+            left: 40px;
+            bottom: 15px;
+            .footer-logo {
+                padding-top: 0;
+                img {
+                    width: 60px;
+                }
+            }
+        }
+    }
+}
+/******************************************************************************
+  Max Width "400px"
+*******************************************************************************/
+@media only screen and (max-width:400px) {
+    
+}

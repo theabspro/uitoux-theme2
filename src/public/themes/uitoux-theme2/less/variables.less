@@ -1,0 +1,140 @@
+ 
+
+/* Font Family */
+@body_font: 'Muli', sans-serif;
+@heading_font: 'Muli', sans-serif;
+
+/* Layout */
+@pagewrap_space: 30px;
+@section_space: 40px;
+@section_space_sm: 30px;
+@container_width: 1920px;
+
+
+/* Resposnive */
+
+@min_468: ~"only screen and (min-width: 468px)";
+@min_467: ~"only screen and (min-width: 467px)";
+
+@min_568: ~"only screen and (min-width: 568px)";
+@max_567: ~"only screen and (max-width: 567px)";
+
+@min767: ~"only screen and (min-width: 767px)";
+@max767: ~"only screen and (max-width: 767px)";
+
+@min768: ~"only screen and (min-width: 768px)";
+@max767: ~"only screen and (max-width: 767px)";
+
+@min991: ~"only screen and (min-width: 991px)";
+@max990: ~"only screen and (max-width: 990px)";
+
+@min1025: ~"only screen and (min-width: 1025px)";
+@min1024: ~"only screen and (min-width: 1024px)";
+@max1023: ~"only screen and (max-width: 1023px)";
+
+@min1201: ~"only screen and (min-width: 1201px)";
+@max1200: ~"only screen and (max-width: 1200px)";
+
+@min_1300: ~"only screen and (min-width: 1300px)";
+@max_1299: ~"only screen and (max-width: 1299px)";
+
+@min1441: ~"only screen and (min-width: 1441px)";
+@max1440: ~"only screen and (max-width: 1440px)";
+
+@min1601: ~"only screen and (min-width: 1601px)";
+@max1600: ~"only screen and (max-width: 1600px)";
+
+@max1299_min991: ~"screen and (max-width: 1299px) and (min-width: 991px)";
+@max990_min768: ~"screen and (max-width: 990px) and (min-width: 768px)";
+@max767_min568: ~"screen and (max-width: 767px) and (min-width: 568px)";
+
+/* Mixins */
+.transition(@transition) {
+    -webkit-transition: @transition;
+    -moz-transition: @transition;
+    -ms-transition: @transition;
+    -o-transition: @transition;
+    transition: @transition;
+}
+.radius(@radius) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -ms-border-radius: @radius;
+    -o-border-radius: @radius;
+    border-radius: @radius;
+}
+.shadow(@boxshadow) {
+    -webkit-box-shadow: @boxshadow;
+    -moz-box-shadow: @boxshadow;
+    -ms-box-shadow: @boxshadow;
+    -o-box-shadow: @boxshadow;
+    box-shadow: @boxshadow;
+}
+.transform(@transform) {
+    -webkit-transform: @transform;
+    -moz-transform: @transform;
+    -ms-transform: @transform;
+    -o-transform: @transform;
+    transform: @transform;
+}
+/* CSS Property */
+@color_body : #2b3748;
+@color_paragraph: #2b3748;
+@color_title : #2b3748;
+
+
+/* Colors */
+@color_primary: #fd7044;
+@color_primary_light: #ee9838;
+@color_secondary: #3c465c;
+@color_secondary_dark: #313355;
+
+@color_black: #171717;
+@color_grey: #333333;
+@color_lgrey: #767676;
+@color_mgrey: #aaaaaa;
+@color_light: #f6f6f6;
+@color_background_light: #fbfbfb;
+@color_border: #bcc3cb;
+@color_border_light: #e1e1e1;
+
+@color_red: #ea4335;
+@color_pink: #B3335F;
+@color_yellow: #fbbc05;
+@color_green: #34a852;
+@color_blue: #4285f4;
+@color_orange: #ff9e72;
+@color_rose: #ff8292;
+
+@color_err: #ea4335;
+
+/* Table Color */
+@color_table_border: #e0e0e0;
+@color_table_border_light: #d8d8d8;
+@color_table_footer: #666666;
+
+/* Mixins */
+.primary_white{
+    background: @color_primary;
+    color: #fff;
+}
+/* Mixin Gradient */
+.gradient_primary{
+    /* background-image: linear-gradient(288deg, #ff4e50, #f9d423); */
+    background: #fd7044;
+    background-image: linear-gradient(288deg, #ff4e50, #fe6a47 45%, #fe8b47);
+}
+.gradient_primary_hover{
+    /* background-image: linear-gradient(288deg, #ff4e50, #f9d423); */
+    background: #fd7044;
+    background-image: linear-gradient(288deg, #fe8b47, #fe6a47 45%, #ff4e50);
+}
+.gradient_primary_light {
+    background-image: linear-gradient(91deg, #ff8b86, #ff524e);
+}
+.gradient_secondary{
+    background-image: linear-gradient(113deg, #45556c,#3c465c 45%, #2b3748);
+}
+.gradient_secondary_hover{
+    background-image: linear-gradient(113deg, #2b3748,#3c465c 45%, #45556c);
+}

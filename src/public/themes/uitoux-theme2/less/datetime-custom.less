@@ -1,0 +1,26 @@
+/* Import Less File */
+@import "variables.less";
+
+/* =================================================================== 
+						Date Time Picker
+======================================================================*/
+.timepicker-picker {
+    table {
+        >tbody{
+            >tr {
+                >td {
+                    .btn {
+                        padding: 0;
+                        background-color: transparent;
+                        color: @color_secondary;
+                        &.btn-primary {
+                            padding: 6px;
+                            color: #fff;
+                            .radius(4px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

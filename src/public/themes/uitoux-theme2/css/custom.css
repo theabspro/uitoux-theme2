@@ -1,0 +1,98 @@
+/* Page Loader */
+#pageloader {
+    height: 100%;
+    position: fixed;
+    top: 0;
+	left:0;
+	right:0;
+    width: 100%;
+    z-index: 99999;
+    background-color: #fff;
+}
+.loader-inner {
+    position: relative;
+    display: block;
+    height: 100%;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+/* Page Loader Theme */
+.flex-container{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: inline-block;
+    flex-direction: row;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.box{
+    display: inline-block;
+    margin: 10px;
+    border: 1em solid #fd7044;
+    opacity: 0;
+}
+.one{
+    animation: box-appear 3s linear infinite;
+}
+.two{
+    animation: box-appear 3s linear .3s infinite;
+}
+.three{
+    animation: box-appear 3s linear .6s infinite;
+}
+.four{
+    animation: box-appear 3s linear .9s infinite;
+}
+.five{
+    animation: box-appear 3s linear 1.2s infinite;
+}
+.six{
+    animation: box-appear 3s linear 1.5s infinite;
+}
+@keyframes box-appear{
+    0%{
+        opacity: 0;
+    }
+    16%{
+        opacity: 1;
+    }
+    48%{
+        opacity: 1;
+    }
+    64%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+/* Page Loader Theme */
+/******************************************************************************
+  Max Width "991px"
+*******************************************************************************/
+@media only screen and (max-width:1400px){
+    .box{
+        border-width: 0.7em;
+    }
+}
+/******************************************************************************
+  Max Width "991px"
+*******************************************************************************/
+@media only screen and (max-width:990px){
+    .box{
+        border-width: 0.5em;
+    }
+}

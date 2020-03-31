@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="183" height="37" viewBox="0 0 183 37">
+    <defs>
+        <linearGradient id="a" x1="100%" x2="-98.618%" y1="100%" y2="-105.434%">
+            <stop offset="0%" stop-color="#FF4E50"/>
+            <stop offset="100%" stop-color="#F9D423"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <text fill="url(#a)" font-family="Rubik-Medium, Rubik" font-size="30" font-weight="400" transform="translate(45.728 -6.5)">
+            <tspan x=".394" y="28.8">BPAS</tspan>
+        </text>
+        <text fill="#FF554E" font-family="Rubik-MediumItalic, Rubik" font-size="8" font-style="italic" font-weight="500" transform="translate(45.728 -6.5)">
+            <tspan x="2.394" y="40.616">Bank Payment Automation System</tspan>
+        </text>
+        <g>
+            <path fill="#EE9838" d="M.217 0h12v12h-12z"/>
+            <path fill="#F3B93E" d="M12.217 0h12v12h-12z"/>
+            <path fill="#F6D244" d="M24.217 0h12v12h-12z"/>
+            <path fill="#F3B93E" d="M24.217 12h12v12h-12z"/>
+            <path fill="#EE9838" d="M24.217 24h12v12h-12z"/>
+            <path fill="#E97A32" d="M.217 12h12v12h-12z"/>
+            <path fill="#E45C13" d="M.217 24h12v12h-12z"/>
+            <path fill="#EA7B32" d="M12.217 24h12v12h-12z"/>
+        </g>
+    </g>
+</svg>

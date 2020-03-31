@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>icons/Approval</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 0.0257402597 11.0823247 0.0257402597 11.0823247 8 0 8"></polygon>
+    </defs>
+    <g id="icons/Approval" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(3.000000, 3.000000)" fill="#436E41">
+            <rect id="Rectangle" x="0.876617121" y="0.876617121" width="22" height="22" rx="11"></rect>
+        </g>
+        <g id="checked" transform="translate(9.000000, 11.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Clip-2"></g>
+            <path d="M3.98711688,8 C3.76225974,8 3.53716883,7.91420779 3.36563636,7.74254545 L0.257506494,4.63441558 C-0.0858441558,4.29109091 -0.0858441558,3.73454545 0.257506494,3.39122078 C0.600831169,3.0478961 1.15737662,3.0478961 1.5007013,3.39122078 L3.98711688,5.87763636 L9.58166234,0.283194805 C9.92498701,-0.060025974 10.4816364,-0.0601298701 10.8247532,0.283194805 C11.1681818,0.626519481 11.1681818,1.18319481 10.8247532,1.52641558 L4.60872727,7.74254545 C4.43706494,7.9141039 4.21207792,8 3.98711688,8" id="Fill-1" fill="#FFFFFF" mask="url(#mask-2)"></path>
+        </g>
+    </g>
+</svg>
