@@ -1,3 +1,8 @@
+@if(config('uitoux-theme2-pkg.DEV'))
+    <?php $uitoux_theme2_pkg_prefix = '/packages/abs/uitoux-theme2-pkg/src/';?>
+@else
+    <?php $uitoux_theme2_pkg_prefix = '';?>
+@endif
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,8 +29,8 @@
 
 <!-- Theme CSS -->
 <link rel="stylesheet" type="text/css" href="{{ asset('public/themes/'.$theme.'/less/theme.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ asset('public/themes/'.$theme.'/less/responsive.css') }}">
-<link href="{{ asset('public/themes/'.$theme.'/css/custom.css') }}" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="{{ asset($uitoux_theme2_pkg_prefix.'public/themes/'.$theme.'/less/responsive.css') }}">
+<link href="{{ asset($uitoux_theme2_pkg_prefix.'public/themes/'.$theme.'/css/custom.css') }}" rel="stylesheet" type="text/css" />
 <!-- Custom CSS -->
 <link rel="stylesheet" type="text/css" href="{{ asset('public/themes/'.$theme.'/css/custom.css') }}">
 

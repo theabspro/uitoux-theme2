@@ -1,3 +1,9 @@
+@if(config('uitoux-theme2-pkg.DEV'))
+    <?php $uitoux_theme2_pkg_prefix = '/packages/abs/uitoux-theme2-pkg/src/';?>
+@else
+    <?php $uitoux_theme2_pkg_prefix = '';?>
+@endif
+
 <script src="{{ asset('public/vendor/jquery.min.js')}}"></script>
 <script src="{{ asset('public/vendor/jquery-validation/js/jquery.validate.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('public/vendor/jquery-validation/js/additional-methods.min.js') }}" type="text/javascript"></script>
@@ -55,5 +61,5 @@ $(document).ready(function(){
 });
 </script>
 
-<script src="{{ asset('public/themes/'.$theme.'/js/theme.js')}}"></script>
-<script src="{{ asset('public/themes/'.$theme.'/js/common.js')}}"></script>
+<script src="{{ asset($uitoux_theme2_pkg_prefix.'public/themes/'.$theme.'/js/theme.js')}}"></script>
+<script src="{{ asset($uitoux_theme2_pkg_prefix.'public/themes/'.$theme.'/js/common.js')}}"></script>
