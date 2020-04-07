@@ -46,6 +46,12 @@ body.modal-open .footer{
     filter: url("https://gist.githubusercontent.com/amitabhaghosh197/b7865b409e835b5a43b5/raw/1a255b551091924971e7dee8935fd38a7fdf7311/blur".svg#blur);
     filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='5');
 }
+
+ul[dnd-list] .dndPlaceholder {
+    background-color: #ddd;
+    display: block;
+    min-height: 42px;
+}
 </style>
 
 

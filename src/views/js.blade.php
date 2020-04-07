@@ -28,6 +28,10 @@
 <script src="{{ URL::asset('public/vendor/jquery.fancybox.min.js')}}"></script>
 <!-- File Upload Plugins -->
 <script src="{{ URL::asset('public/vendor/fileinput.js')}}"></script>
+@include('helper-pkg::angular-js/js')
+
+<!-- AngularJS Drag and Dop -->
+<script src="{{ URL::asset('public/vendor/angular-drag-and-drop-lists-master/angular-drag-and-drop-lists.min.js')}}"></script>
 
 
 <script type="text/javascript">
