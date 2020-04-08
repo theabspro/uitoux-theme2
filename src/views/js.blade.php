@@ -33,8 +33,11 @@
 <!-- AngularJS Drag and Dop -->
 <script src="{{ URL::asset('public/vendor/angular-drag-and-drop-lists-master/angular-drag-and-drop-lists.min.js')}}"></script>
 
+@include('helper-pkg::setup')
 
 <script type="text/javascript">
+angular.module('app').requires.push('dndLists');
+
 $(document).ready(function(){
   var current = $(location).attr('pathname');
   $('#bs-example-navbar-collapse-1 > ul li a').each(function(){
