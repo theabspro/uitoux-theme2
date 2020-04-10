@@ -30,13 +30,37 @@
 <script src="{{ URL::asset('public/vendor/fileinput.js')}}"></script>
 @include('helper-pkg::angular-js/js')
 
+@include('helper-pkg::angular-js-plugins/tiny-color/js')
+@include('helper-pkg::angular-js-plugins/ruhley-angular-color-picker/js')
+
 <!-- AngularJS Drag and Dop -->
 <script src="{{ URL::asset('public/vendor/angular-drag-and-drop-lists-master/angular-drag-and-drop-lists.min.js')}}"></script>
 
 @include('helper-pkg::setup')
 
 <script type="text/javascript">
-angular.module('app').requires.push('dndLists');
+    {{-- AngularJS Provider Dependancy Injections --}}
+    angular.module('app').requires.push('dndLists');
+    angular.module('app').requires.push('color.picker');
+
+    var color_picker_options = {
+        required: true,
+        allowEmpty: false,
+        format: 'rgb',
+        alpha: false,
+        swatch: true,
+        swatchBootstrap: true,
+        swatchOnly: true,
+        show: {
+            swatch: true,
+            focus: true,
+        },
+        hide: {
+            blur: true,
+            escape: true,
+            click: true,
+        },
+    };
 
 $(document).ready(function(){
   var current = $(location).attr('pathname');

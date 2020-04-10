@@ -26,7 +26,7 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('public/vendor/daterangepicker.min.css') }}">
 <!-- JQuery UI -->
 <link rel="stylesheet" type="text/css" href="{{ asset('public/vendor/jquery-ui/css/jquery-ui.min.css') }}">
-
+@include('helper-pkg::angular-js-plugins/ruhley-angular-color-picker/css')
 <!-- Theme CSS -->
 <link rel="stylesheet" type="text/css" href="{{ asset('public/themes/'.$theme.'/less/theme.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset($uitoux_theme2_pkg_prefix.'public/themes/'.$theme.'/less/responsive.css') }}">
