@@ -222,6 +222,9 @@ var cndn_dom_structure =
 /* ----------- Document Ready ----------- */
 
 $(document).ready(function() {
+    $(".navbar-fixed-top").autoHidingNavbar({
+        showOnBottom: false,
+    });
     if (jQuery.ui) {
         var datepicker = $.fn.datepicker.noConflict();
         $.fn.bootstrapDP = datepicker;

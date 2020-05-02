@@ -1,7 +1,9 @@
 @if(config('uitoux-theme2-pkg.DEV'))
     <?php $uitoux_theme2_pkg_prefix = '/packages/abs/uitoux-theme2-pkg/src/';?>
+    <?php $helper_pkg_prefix = '/packages/abs/helper-pkg/src/';?>
 @else
     <?php $uitoux_theme2_pkg_prefix = '';?>
+    <?php $helper_pkg_prefix = '';?>
 @endif
 
 <script src="{{ asset('public/vendor/jquery.min.js')}}"></script>
@@ -36,6 +38,9 @@
 <!-- AngularJS Drag and Dop -->
 <script src="{{ URL::asset('public/vendor/angular-drag-and-drop-lists-master/angular-drag-and-drop-lists.min.js')}}"></script>
 
+{{-- Bootstrap Autohide Navebar --}}
+
+<script src="{{ URL::asset($helper_pkg_prefix.'public/plugins/bootstrap-autohidingnavbar/dist/jquery.bootstrap-autohidingnavbar.min.js')}}"></script>
 @include('helper-pkg::setup')
 
 <script type="text/javascript">
